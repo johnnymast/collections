@@ -8,12 +8,12 @@ gulp.task('test', function() {
         .pipe(run('clear'))
         .pipe(phpunit('', {notify: false}))
         .on('error', notify.onError({
-            title: "Vulcan Collections",
+            title: "Axiom Collections",
             message: "Tests failed.",
             icon: __dirname + '/failed.png'
         }))
         .pipe(notify({
-            title: "Vulcan Collections",
+            title: "Axiom Collections",
             message: "Tests passed!",
             icon: __dirname + '/success.png'
         }));
@@ -22,5 +22,6 @@ gulp.task('test', function() {
 gulp.task('watch', function() {
     gulp.watch('**/*.php', ['test']);
 });
+
 
 gulp.task('default', ['test', 'watch']);
