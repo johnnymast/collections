@@ -146,7 +146,7 @@ class Collection implements CollectionContract, ArrayAccess, Countable, Iterator
      *
      * @param callable $callable
      *
-     * @return void
+     * @return self
      */
     public function each(callable $callback)
     {
